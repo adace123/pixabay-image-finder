@@ -57,7 +57,7 @@ class Search extends React.Component<SearchProps, {}> {
           `${apiURL}&q=${searches}&image_type=photo`
         );
         this.setState({ photos: data.hits.slice(0, this.state.amount) });
-      }
+      } else this.setState({ photos: [] });
     });
   }
 
